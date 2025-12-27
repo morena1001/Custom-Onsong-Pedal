@@ -10,7 +10,7 @@ BleKeyboard keyboard ("Onsong pedal");
 #define PEDAL_5_PIN   32 
 #define PEDAL_6_PIN   33 
 #define PEDAL_7_PIN   27 
-#define PEDAL_8_PIN   13 
+#define PEDAL_8_PIN   14 
 #define SCROLL_PIN    13 
 #define DB_DELAY      50
 
@@ -108,7 +108,7 @@ void loop () {
 
       if (pedal_3_state == HIGH) {
         Serial.println ("Sending 'c' character");
-        keyboard.print ("a");
+        keyboard.print ("c");
       }
     }
   }
@@ -119,7 +119,7 @@ void loop () {
 
       if (pedal_4_state == HIGH) {
         Serial.println ("Sending 'd' character");
-        keyboard.print ("e");
+        keyboard.print ("d");
       }
     }
   }
