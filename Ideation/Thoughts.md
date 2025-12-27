@@ -50,7 +50,7 @@ Input commands to investigate:
 - Key adjust
 - Key change
 
-The pedl has to be a keyboard pedal, with a character mapped to an input
+The pedal has to be a keyboard pedal, with a character mapped to an input
 
 I will repurpose the ESP32 to communicate with the iPad via BT.
 - I could use the BLEkeyboard library to easily emulate a library, but has a caveat where I need to use a third party app to connect with the iPad.
