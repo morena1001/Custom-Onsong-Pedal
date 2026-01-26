@@ -123,7 +123,7 @@
         "max_error": 0.005,
         "min_clearance": 0.2,
         "min_connection": 0.0,
-        "min_copper_edge_clearance": 0.0,
+        "min_copper_edge_clearance": 0.5,
         "min_hole_clearance": 0.25,
         "min_hole_to_hole": 0.254,
         "min_microvia_diameter": 0.2,
@@ -440,7 +440,7 @@
       "no_connect_dangling": "warning",
       "pin_not_connected": "error",
       "pin_not_driven": "error",
-      "pin_to_pin": "warning",
+      "pin_to_pin": "error",
       "power_pin_not_driven": "error",
       "similar_labels": "warning",
       "simulation_model_issue": "ignore",
@@ -455,7 +455,7 @@
     "pinned_symbol_libs": []
   },
   "meta": {
-    "filename": "PCB.kicad_pro",
+    "filename": "Secondary PCB.kicad_pro",
     "version": 1
   },
   "net_settings": {
@@ -493,7 +493,7 @@
       "plot": "Manufacturing/",
       "pos_files": "Manufacturing/",
       "specctra_dsn": "",
-      "step": "",
+      "step": "Secondary PCB.step",
       "svg": "",
       "vrml": ""
     },
@@ -501,7 +501,7 @@
   },
   "schematic": {
     "annotate_start_num": 0,
-    "bom_export_filename": "Bill of materials",
+    "bom_export_filename": "bill of materials.csv",
     "bom_fmt_presets": [],
     "bom_fmt_settings": {
       "field_delimiter": ",",
@@ -599,6 +599,14 @@
       "version": 1
     },
     "net_format_name": "",
+    "ngspice": {
+      "fix_include_paths": true,
+      "meta": {
+        "version": 0
+      },
+      "model_mode": 4,
+      "workbook_filename": ""
+    },
     "page_layout_descr_file": "",
     "plot_directory": "",
     "spice_current_sheet_as_root": false,
@@ -612,7 +620,7 @@
   },
   "sheets": [
     [
-      "360e0c87-1589-4640-a17a-e09ae52ce46d",
+      "c6f2bc20-1a54-4d5d-aac9-d3080edffe3e",
       "Root"
     ]
   ],

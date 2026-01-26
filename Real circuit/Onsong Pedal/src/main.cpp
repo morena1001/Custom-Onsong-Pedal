@@ -3,7 +3,7 @@
 
 BleKeyboard keyboard ("Onsong pedal");
 
-#define PEDAL_1_PIN   36 
+#define PEDAL_1_PIN   13//36 
 #define PEDAL_2_PIN   39 
 #define PEDAL_3_PIN   34 
 #define PEDAL_4_PIN   35 
@@ -11,7 +11,6 @@ BleKeyboard keyboard ("Onsong pedal");
 #define PEDAL_6_PIN   33 
 #define PEDAL_7_PIN   27 
 #define PEDAL_8_PIN   14 
-#define SCROLL_PIN    13 
 #define DB_DELAY      50
 
 unsigned long pedal_1_last_db_time = 0;
@@ -22,7 +21,6 @@ unsigned long pedal_5_last_db_time = 0;
 unsigned long pedal_6_last_db_time = 0;
 unsigned long pedal_7_last_db_time = 0;
 unsigned long pedal_8_last_db_time = 0;
-unsigned long scroll_last_db_time = 0;
 
 int pedal_1_state;
 int pedal_2_state;
@@ -32,7 +30,6 @@ int pedal_5_state;
 int pedal_6_state;
 int pedal_7_state;
 int pedal_8_state;
-int scroll_state;
 
 int pedal_1_last_state = LOW;
 int pedal_2_last_state = LOW;
@@ -42,11 +39,9 @@ int pedal_5_last_state = LOW;
 int pedal_6_last_state = LOW;
 int pedal_7_last_state = LOW;
 int pedal_8_last_state = LOW;
-int scroll_last_state = LOW;
 
 void setup () {
-  Serial.begin (115200);
-
+  // Serial.begin (115200);
   pinMode (PEDAL_1_PIN, INPUT);
   pinMode (PEDAL_2_PIN, INPUT);
   pinMode (PEDAL_3_PIN, INPUT);
@@ -55,9 +50,8 @@ void setup () {
   pinMode (PEDAL_6_PIN, INPUT);
   pinMode (PEDAL_7_PIN, INPUT);
   pinMode (PEDAL_8_PIN, INPUT);
-  pinMode (SCROLL_PIN, INPUT);
 
-  Serial.println ("Starting BLE");
+  // Serial.println ("Starting BLE");
   keyboard.begin ();
 }
 
@@ -85,7 +79,7 @@ void loop () {
       pedal_1_state = pedal_1_reading;
 
       if (pedal_1_state == HIGH) {
-        Serial.println ("Sending 'a' character");
+        // Serial.println ("Sending 'a' character");
         keyboard.print ("a");
       }
     }
@@ -96,7 +90,7 @@ void loop () {
       pedal_2_state = pedal_2_reading;
 
       if (pedal_2_state == HIGH) {
-        Serial.println ("Sending 'b' character");
+        // Serial.println ("Sending 'b' character");
         keyboard.print ("b");
       }
     }
@@ -107,7 +101,7 @@ void loop () {
       pedal_3_state = pedal_3_reading;
 
       if (pedal_3_state == HIGH) {
-        Serial.println ("Sending 'c' character");
+        // Serial.println ("Sending 'c' character");
         keyboard.print ("c");
       }
     }
@@ -118,7 +112,7 @@ void loop () {
       pedal_4_state = pedal_4_reading;
 
       if (pedal_4_state == HIGH) {
-        Serial.println ("Sending 'd' character");
+        // Serial.println ("Sending 'd' character");
         keyboard.print ("d");
       }
     }
@@ -129,7 +123,7 @@ void loop () {
       pedal_5_state = pedal_5_reading;
 
       if (pedal_5_state == HIGH) {
-        Serial.println ("Sending 'e' character");
+        // Serial.println ("Sending 'e' character");
         keyboard.print ("e");
       }
     }
@@ -140,7 +134,7 @@ void loop () {
       pedal_6_state = pedal_6_reading;
 
       if (pedal_6_state == HIGH) {
-        Serial.println ("Sending 'f' character");
+        // Serial.println ("Sending 'f' character");
         keyboard.print ("f");
       }
     }
@@ -151,7 +145,7 @@ void loop () {
       pedal_7_state = pedal_7_reading;
 
       if (pedal_7_state == HIGH) {
-        Serial.println ("Sending 'g' character");
+        // Serial.println ("Sending 'g' character");
         keyboard.print ("g");
       }
     }
@@ -162,7 +156,7 @@ void loop () {
       pedal_8_state = pedal_8_reading;
 
       if (pedal_8_state == HIGH) {
-        Serial.println ("Sending 'h' character");
+        // Serial.println ("Sending 'h' character");
         keyboard.print ("h");
       }
     }
