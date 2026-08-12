@@ -1,0 +1,12 @@
+{
+	"folders": [
+		{
+			"path": "Real circuit/Onsong Pedal"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"functional": "cpp"
+		}
+	}
+}
